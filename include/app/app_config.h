@@ -54,3 +54,10 @@
  * ----------------------------- */
 /* #define O2_SAMPLE_PERIOD_MS      500 */
 /* #define O2_WARNING_PCT           195 */ /* example: 19.5% O2 (scaled) */
+
+
+/* -----------------------------
+ * Default Init Values
+ * ----------------------------- */
+#define DEFAULT_INIT_SUIT_TEMP_C_X100 2500 /* 25.00°C */
+#define DEFAULT_BATT_MV               4200 /* 4.2V */
