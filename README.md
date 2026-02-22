@@ -1,4 +1,16 @@
-1. Install System Dependencies
+# Spacesuit Monitor (Zephyr RTOS Application)
+
+Spacesuit Monitor is a Zephyr RTOS-based embedded application that simulates a safety monitoring subsystem for a spacesuit. 
+The system currently monitors: 
+- Temperature thresholds (caution and warning levels)
+- Sensor fault conditions
+- Mode transitions (SAFE, OPERATIONAL, FAULT)
+- System statistics and event tracking
+- Structured logging output
+
+
+---
+### 1. Install System Dependencies
 - Run the following:
 ```
 sudo apt update
@@ -23,7 +35,7 @@ sudo apt install -y \
 ```
 
 ---
-2. Install West (Zephyr Meta Tool)
+### 2. Install West (Zephyr Meta Tool)
 - Create a Python virtual environment:
 ```
 mkdir -p ~/zephyr-tools
@@ -40,8 +52,8 @@ pip install west
 source ~/zephyr-tools/.venv/bin/activate
 ```
 ---
-3. Create Zephyr Workspace
-The workspace will be created at:
+### 3. Create Zephyr Workspace
+- The workspace will be created at:
 ```
 ~/zephyrproject
 ```
@@ -59,7 +71,7 @@ west zephyr-export
 pip install -r zephyr/scripts/requirements.txt
 ```
 ---
-4. Install Zephyr SDK
+### 4. Install Zephyr SDK
 - From inside ~/zephyrproject:
 ```
 wget https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v0.17.4/zephyr-sdk-0.17.4_linux-x86_64.tar.xz
@@ -85,7 +97,7 @@ echo $ZEPHYR_SDK_INSTALL_DIR
 ```
 
 ---
-5. Clone the Spacesuit Monitor Application
+### 5. Clone the Spacesuit Monitor Application
 
 - Create the apps directory:
 ```
@@ -100,7 +112,7 @@ cd spacesuit_monitor
 ```
 
 ---
-6. Build the Application
+### 6. Build the Application
 
 - From inside:
 ```
@@ -113,7 +125,7 @@ west build -b qemu_x86 -p always
 ```
 
 ---
-7. Run the Application
+### 7. Run the Application
 ```
 west build -t run
 ```
