@@ -22,17 +22,19 @@
  * temp is stored as "C x100" (e.g., 25.34°C => 2534)
  * battery is stored in millivolts (mV)
  * ----------------------------- */
-#define TEMP_CAUTION_C_X100       4500   /* 45.00°C */
-#define TEMP_WARNING_C_X100       5500   /* 55.00°C */
+
+
+#define TEMP_CAUTION_MIN_C_X100     1500   /* 15.00°C */
+#define TEMP_CAUTION_MAX_C_X100     4500   /* 45.00°C */
+#define TEMP_WARNING_MIN_C_X100     500   /* 5.00°C */
+#define TEMP_WARNING_MAX_C_X100     5500   /* 55.00°C */
+#define TEMP_VALID_MIN_C_X100      -2000   /* -20.00°C */
+#define TEMP_VALID_MAX_C_X100       8000   /* 80.00°C */
 
 #define BATT_CAUTION_MV           3600   /* 3.60V */
 #define BATT_WARNING_MV           3400   /* 3.40V */
-
-#define TEMP_MIN_VALID_C_X100    -2000   /* -20.00°C */
-#define TEMP_MAX_VALID_C_X100     8000   /* 80.00°C */
-
-#define BATT_MIN_VALID_MV         3000
-#define BATT_MAX_VALID_MV         4300
+#define BATT_VALID_MIN_MV         3000
+#define BATT_VALID_MAX_MV         4300
 
 /* -----------------------------
  * RTOS / IPC sizing

@@ -34,8 +34,8 @@ typedef struct {
     int32_t last_temp_c_x100;   /* temp in C x100 */
     int32_t last_batt_mv;       /* battery in mV */
 
-    uint32_t mode_transitions;
-    uint32_t fault_count;
+    uint32_t mode_transitions;  /* can help track stability of suit monitor*/
+    uint32_t fault_count;       /* can help track health of suit*/
 } suit_state_t;
 
 void suit_state_init(suit_state_t *s);
