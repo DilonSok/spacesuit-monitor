@@ -8,6 +8,7 @@ target_include_directories(app PRIVATE include)
 target_sources(app PRIVATE
   src/main.c
   src/app/app_init.c
+  src/app/app_ipc.c
   src/core/suit_state.c
   src/drivers/temp_sensor.c
   src/drivers/battery_gauge.c
